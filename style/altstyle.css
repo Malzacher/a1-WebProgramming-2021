@@ -1,0 +1,263 @@
+.container {
+	display: grid;
+	height: 100vh;
+	/* different for different browsers so specifiying that we do not want a margin or padding */
+	margin: 0;
+	padding: 0;
+	grid-template-columns: .75fr 1fr 1fr 1fr;
+	grid-template-rows: 0.3fr 1.5fr 1.2fr .4fr;
+	grid-gap: 0.2rem;
+	grid-template-areas: "logo nav nav nav""sidebar main main main""sidebar main main main""sidebar footer footer footer";
+	font-family: "Poppins", sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #fbfffe;
+}
+
+/* Centered text used within the index html*/
+
+.divheading {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 18px;
+	-webkit-text-stroke-width: 0px;
+	-webkit-text-stroke-color: black;
+}
+
+/* Centered text used within the index html*/
+
+.divtext {
+	position: absolute;
+	text-align: center;
+	top: 20%;
+	font-size: 10px;
+	-webkit-text-stroke-width: 0.32px;
+	-webkit-text-stroke-color: black;
+	overflow-wrap: break-word;
+}
+
+#logo {
+	background: #393E46;
+	grid-area: logo;
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	background: #4ECCA3;
+	grid-area: nav;
+	text-align: center;
+}
+
+main {
+	grid-area: main;
+	color: black;
+	background-size: contain;
+	width: 100%;
+	opacity: 0.85;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background-color: #EEEEEE;
+	padding: 5px;
+}
+
+#sidebar {
+	background: #393E46;
+	grid-area: sidebar;
+	font-weight: 600;
+	text-transform: capitalize;
+	font-size: 16px;
+}
+
+#sidebar li a:hover {
+	color: #D7D7D7;
+}
+
+/* This was used to shorten the length of code and limit the amount of line of code in the CSS */
+
+#content1,
+#content2,
+#content3 {
+	grid-area: content1;
+	color: rgb(255, 255, 255);
+	background-size: contain;
+	width: 100%;
+	opacity: 0.85;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+
+#content1:hover,
+#content2:hover,
+#content3:hover {
+	transform: scale(1.015);
+	transition: 0.5s;
+}
+
+#content1:hover:after,
+#content2:hover:after,
+#content3:hover:after {
+	transition: 0.5s;
+}
+
+#content1 {
+	grid-area: content1;
+}
+
+#content2 {
+	grid-area: content2;
+}
+
+#content3 {
+	grid-area: content3;
+}
+
+footer {
+	background: #4ECCA3;
+	grid-area: footer;
+	color: #EEEEEE;
+	position: relative;
+	float: right;
+	text-align: right;
+	padding: 20px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+	margin-right: 30px;
+	font-size: 14px;
+	position: relative;
+	top: 30px;
+}
+
+li a {
+	text-decoration: none;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: #232931;
+}
+
+p>a {
+	color: grey;
+}
+
+.animation::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #353638;
+	transition: width 0.3s;
+}
+
+.animation:hover::after {
+	width: 100%;
+	color: #353638;
+	transition: width 0.3s;
+}
+
+footer a {
+	color: black;
+}
+
+#sidebar>ul>li {
+	display: flex;
+	font-size: 14px;
+	list-style-type: none;
+	left: 14px;
+	padding: 19px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+label {
+	display: inline-block;
+
+	text-align: right;
+}
+
+footer>a {
+	color: #D7D7D7;
+}
+
+input:focus,
+textarea:focus {
+	background-color: lightyellow;
+}
+
+#registration_form .label {
+	float: left;
+	width: 140px;
+}
+
+/* for errors */
+#registration_form .error {
+	color: red;
+	font-size: 12px;
+	margin-left: 140px;
+	display: none;
+}
+
+#registration_form input[type=submit] {
+	width: 50%;
+	margin-left: 25%;
+}
+
+main>ul,
+p,
+main>ul>li {
+	font-size: 12px;
+	font-weight: 500;
+	text-align: left;
+	list-style-type: square;
+	display: list-item;
+}
+
+iframe {
+	float: right;
+	position: relative;
+	top: 175px;
+	margin: 0 20px 5px 0;
+}
+
+h1,
+h3 {
+	text-align: left;
+}
+
+div.form {
+	display: block;
+	text-align: center;
+
+}
+
+form {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+#membershipCost {
+	margin-top: 10px;
+	text-align: center;
+}

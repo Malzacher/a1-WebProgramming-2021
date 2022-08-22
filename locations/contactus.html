@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- refrencing an external stylesheet -->
+    <link rel="stylesheet" href="../style/altstyle.css">
+    <title>Contact Us</title>
+    <style>
+        /* importing a font from online  */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    </style>
+</head>
+<div class="container">
+    <nav>
+        <ul>
+            <!-- the use of a list to breakup the navigation bar elements, thus can be easily manipulated within the css -->
+            <li><a href="../index.html" class="animation">Home</a></li>
+            <li><a href="registration.html" class="animation">Register</a></li>
+            <li><a href="contactus.html" class="animation">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <!-- the form here when completed will, open an email link adressed to LIFE@localcouncil.com -->
+            <div class="form">
+                <form name="contactus" method="post" action="LIFE@localcouncil.com"><br><br><br><br><br>
+
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+
+                    <label for="phonenum">Phone:</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your phone number.."><br>
+
+                    <label for="subject">Subject:</label><br>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:200px"></textarea><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </main>
+    <div id="logo"> <img src="../images/Life.png" alt="LifeLogo.png" width="150"> </div>
+    <!-- once agin, the use of a list to breakup the navigation bar elements, thus can be easily manipulated within the css -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="yoga.html"> Yoga</a></li>
+            <li><a href="meditation.html"> Mediation</a></li>
+            <li><a href="stretching.html"> Stretching</a></li>
+            <li><a href="healthyhabits.html"> Healthy Habits</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="mealplanner.html"> Meal Planner</a></li>
+        </ul>
+    </div>
+    <!-- the footer presents relevant information to its section including the name of the website with a copyright symbol, 
+      a link to the covid 19 website and a link to the contact us form (contactus.html). -->
+    <footer>
+        <h4> Life - Health and Wellbeing © </h4>
+        <a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert">Visit the
+            covid-19 website for concerns!</a><br>
+        <a href="contactus.html">Contact Us!</a><br>
+        <a href="sitemap.html">Site Map!</a>
+    </footer>
+</div>

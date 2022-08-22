@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+   <title>Registration</title>
+   <script type="text/javascript" src="../scripts/validation.js"></script>
+   <link rel="stylesheet" href="../style/altstyle.css">
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <nav>
+         <ul>
+            <li><a href="../index.html" class="animation">Home</a></li>
+            <li><a href="registration.html" class="animation">Register</a></li>
+            <li><a href="contactus.html" class="animation">Contact Us</a></li>
+         </ul>
+      </nav>
+      <main>
+         <!-- this is validated through the validation.js and when complete will be sent to the LIFE@localcouncil.com email address as per assignment specs -->
+         <form id="registration_form" onsubmit="return validateForm()" method="post"
+            action="mailto:LIFE@localcouncil.com">
+
+            <div>
+               <!-- adds pretty border around form -->
+               <br><br>
+
+               <div><span class="label">First Name:</span><input name="firstname" type="text" value="" id="firstname" />
+               </div>
+               <div class="error" id="firstnameError">Required: Please enter your first name</div>
+               <!-- the error element is hidden unless field is not inputted correctly -->
+               <br>
+
+               <div><span class="label">Last Name:</span><input name="lastname" type="text" value="" id="lastname" />
+               </div>
+               <div class="error" id="lastnameError">Required: Please enter your last name</div>
+               <br>
+
+               <div><span class="label">Phone Number:</span><input name="phoneNumber" type="text" value=""
+                     id="phoneNumber" />
+               </div>
+
+               <!-- this is shown to show the use the correct format to avoid difficulty -->
+               <div class="error" id="phoneNumberError">Required: Please enter a valid phone number (Format: +61 4** ***
+                  ***)
+               </div>
+               <br>
+
+               <div><span class="label">Email:</span><input name="email" type="text" value="" id="email" /></div>
+               <div class="error" id="emailError"> Required: Please enter a valid email</div>
+               <br>
+
+               <div><span class="label">Confirm Email:</span><input name="cemail" type="text" onpaste="return false;"
+                     value="" id="confemail" /></div>
+               <div class="error" id="confemailError"> Required: Please enter a valid email</div>
+               <br>
+
+               <!-- the implementation of the slider with min and max values alongside a display to show the value as the user slides across -->
+               <div>
+                  <label for="age">Slide to input age:</label>
+                  <br></br>
+                  <input type="range" min="16" max="90" onchange=" return membershipCheck()" value="18" class="slider"
+                     id="ageRange">
+                  <p>Age: <span id="demo"></span></p>
+               </div>
+
+               <script>
+                  var slider = document.getElementById("ageRange");
+                  var output = document.getElementById("demo");
+                  output.innerHTML = slider.value;
+                  slider.oninput = function () {
+                     output.innerHTML = this.value;
+                  }
+               </script>
+
+               <!-- the radio button with a requirement field to ensure that they are filled before submission -->
+               <div>
+                  <p>Are you a student?</p>
+                  <div>
+                     <input type="radio" name="2" onchange=" return membershipCheck()" id="studentstatus" value="true"
+                        required /> Yes
+                     <input type="radio" name="2" onchange=" return membershipCheck()" id="studentstatus" value="false"
+                        required checked /> No
+                  </div>
+               </div>
+               <br>
+
+               <!-- the radio button with a requirement field to ensure that they are filled before submission -->
+               <div>
+                  <p>Are you employed?</p>
+                  <div>
+                     <input type="radio" name="1" onchange=" return membershipCheck()" id="employmentstatus"
+                        value="true" checked required /> Yes
+                     <input type="radio" name="1" onchange=" return membershipCheck()" id="employmentstatus"
+                        value="false" required /> No
+                  </div>
+               </div>
+               <br>
+               <div><input id="registration_submit" type="submit" value="Submit" /></div>
+            </div>
+         </form>
+         <div id="membershipCost">
+         </div>
+      </main>
+
+      <div id="logo"> <img src="../images/Life.png" alt="LifeLogo.png" width="150"> </div>
+      <div id="sidebar">
+         <ul>
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="yoga.html"> Yoga</a></li>
+            <li><a href="meditation.html"> Mediation</a></li>
+            <li><a href="stretching.html"> Stretching</a></li>
+            <li><a href="healthyhabits.html"> Healthy Habits</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="mealplanner.html"> Meal Planner</a></li>
+         </ul>
+      </div>
+</body>
+<footer>
+   <h4> Life - Health and Wellbeing © </h4>
+   <a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert">Visit the
+      covid-19 website for concerns!</a><br>
+   <a href="contactus.html">Contact Us!</a><br>
+   <a href="sitemap.html">Site Map!</a>
+</footer>
+</body>
